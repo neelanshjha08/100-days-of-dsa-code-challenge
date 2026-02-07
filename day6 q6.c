@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Print first element (always unique)
+    printf("%d ", arr[0]);
+
+    // Check remaining elements
+    for (int i = 1; i < n; i++) {
+        if (arr[i] != arr[i - 1]) {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    return 0;
+}
